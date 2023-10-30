@@ -13,7 +13,7 @@ export const environment = {
     messagingSenderId: '223646324820',
   },
   production: false,
-  endpoint: 'https://localhost:7072'
+  endpoint: 'https://localhost:7183'
 };
 
 /*

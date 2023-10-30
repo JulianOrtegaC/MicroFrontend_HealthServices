@@ -3,13 +3,15 @@ import { GuardGuard } from './Guards/guard.guard';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { HomeComponent } from './components/home/home.component';
+import { ProfileComponent } from './components/profile/profile.component';
 
 const routes: Routes = [
   // {path: 'profile', component: ProfileComponent, canActivate:[GuardGuard]},
   {path: 'about',component:AboutUsComponent},
   {path: 'home',component:HomeComponent},
+  {path: 'profile', component: ProfileComponent},
   {path: '', redirectTo:'/about' , pathMatch:'full'},
-  {path: "**",redirectTo:'/about' , pathMatch:'full'}
+  {path: "**",redirectTo:'/about' , pathMatch:'full'},
 
 ];
 @NgModule({

@@ -14,6 +14,7 @@ import { provideStorage,getStorage } from '@angular/fire/storage';
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { HomeComponent } from './components/home/home.component';
 import { OrderByPrecioPipe } from './components/home/order-by-precio.pipe';
+import { ProfileComponent } from './components/profile/profile.component';
 
 
 
@@ -23,7 +24,8 @@ import { OrderByPrecioPipe } from './components/home/order-by-precio.pipe';
     NavBarComponent,
     AboutUsComponent,
     HomeComponent,
-    OrderByPrecioPipe
+    OrderByPrecioPipe,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

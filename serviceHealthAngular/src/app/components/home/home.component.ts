@@ -29,6 +29,7 @@ export class HomeComponent {
     private viewService: ViewServiceService,
     private router: Router
   ) {
+    registerService.dataquemada();
     this.dataProfile = registerService.getdatosPerfil$;
     if (this.dataProfile.IdUser) {
       this.idActualuser$ = this.dataProfile.IdUser;
@@ -39,7 +40,7 @@ export class HomeComponent {
   mostrarModalVermasServicio(auxPubli: Service) {}
 
   getServices() {
-    if (this.dataProfile.IdUser)
+    // if (this.dataProfile.IdUser)
       this.servicesService.getServices().subscribe((data) => {
         this.listaPublicaciones = data;
         this.listaPublicacionesAux = this.listaPublicaciones;

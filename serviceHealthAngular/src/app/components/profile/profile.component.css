@@ -1,0 +1,577 @@
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap');
+
+  .tiltemycuenta {
+    font-size: 36px;
+    font-family: 'Poppins';
+    font-style: normal;
+    margin-left: 5%;
+  }
+
+  .matDividerMicuenta {
+    width: 90%;
+  }
+
+  .contenedor {
+    height: 100%;
+    display: flex;
+    background-color: #fff;
+  }
+
+  .left-content {
+    display: inline;
+    width: 35%;
+    height: 88vh;
+    background-color: #fff;
+  }
+
+  .profile-name {
+    display: flex;
+    margin-top: 15%;
+    margin-left: 10%;
+    width: 90%;
+  }
+
+  .profile-name p:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  .image-profile {
+    width: 40%;
+
+    height: 100%;
+    border-radius: 150px;
+    background-color: white;
+  }
+
+  .text-name {
+    font-family: Arial;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    padding-left: 5%;
+    font-size: larger;
+  }
+  .text-nameS {
+    font-family: Arial;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    padding-left: 5%;
+    font-size: 40px;
+  }
+
+  .config-profile {
+    width: 90%;
+    border-radius: 20px;
+    margin-top: 15%;
+    margin-left: 10%;
+    padding: auto;
+
+  }
+
+  .nav-seleccionada {
+    background-color: #A4CDF2;
+    color: #147ad4;
+    font-weight: bold;
+  }
+
+  a:hover {
+    cursor: pointer;
+    background-color: #E6E3E3;
+  }
+
+  a {
+    padding: 10px;
+    margin-top: 15px;
+    display: flex;
+    text-decoration: none;
+    font-size: x-large;
+    font-family: 'Inter';
+    width: 50%;
+    border-radius: 20px;
+    color: #151111;
+
+  }
+
+  .right-profile,
+  .conteCompras,
+  .conteVentas,
+  .conteProfile {
+    background-color: #fff;
+    margin-top: 5%;
+    width: 100%;
+  }
+
+
+  .profile-button {
+    background-color: transparent;
+    width: 100%;
+    height: 20%;
+    display: flex;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+  }
+
+  .icon-profile {
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 6%;
+
+  }
+
+  .info-profile h2 {
+    font-family: 'Poppins';
+    margin-left: 3%;
+  }
+
+  .info-profile p {
+    margin: 0;
+  }
+
+  .info-profile {
+    display: inline;
+    width: 80%;
+    height: 100%;
+    text-align: left;
+    margin: 0;
+  }
+
+
+
+  .material-symbols-outlined {
+    font-size: 50px;
+    margin-right: 0;
+
+  }
+
+  mat-divider {
+    width: 60%;
+    margin-left: 5%;
+    border-color: #969696;
+  }
+
+
+
+  .h1-cv {
+    font-family: 'Poppins';
+    font-weight: bold;
+    position: relative;
+    display: inline;
+    font-size: 24px;
+    line-height: 36px;
+
+    color: #151111;
+  }
+
+  .TablaxD {
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  .mat-mdc-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+
+  td,
+  th {
+    width: 25%;
+  }
+
+
+  /* aqui el css de lo de myProfile */
+  .conteProfile {
+    background-color: white;
+  }
+
+  .imagen {
+    height: 25%;
+  }
+
+  .imgPortada {
+    display: flex;
+    height: 12vw;
+    width: 95%;
+
+  }
+
+  .imgMyPortada {
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+  }
+
+  .divImgMyProfile {
+    position: absolute;
+    top: 18vw;
+    margin-left: 4%;
+    display: flex;
+    width: 13%;
+    height: 20%;
+
+  }
+
+  .imgMyProfile2 {
+    background-color: #fff;
+    border-radius: 46%;
+    width: 100%;
+    height: 100%;
+  }
+  .imgProfile{
+    display: flex;
+    width: 20%;
+    height: 100%;
+  }
+  .imgMyProfile {
+    width: 100%;
+    height: 100%;
+    border-radius: 46%;
+  }
+
+  .divImgProfile {
+    display: flex;
+    margin-bottom: 8%;
+    height: 30%;
+  }
+ 
+  
+
+
+
+  .matdividerProfile {
+    width: 90%;
+    margin-top: 25px;
+    margin-bottom: 25px;
+
+  }
+
+  .titleh1 {
+    font-family: 'Poppins';
+    margin-left: 22%;
+    font-weight: bolder;
+  }
+
+  .ptitle {
+    font-family: 'Inter';
+    margin-left: 22%;
+    font-weight: bold;
+  }
+
+
+  h4 {
+    width: 30%;
+    font-weight: 500;
+  }
+
+  [type="date"] {
+    background: #fff url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png) 97% 50% no-repeat;
+  }
+
+  [type="date"]::-webkit-inner-spin-button {
+    display: none;
+  }
+
+  [type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 0;
+  }
+
+
+  /* aqui esta el de personal data / editar data */
+  .buttonEditar {
+    position: relative;
+    margin-left: 80%;
+    width: 100px;
+    height: 30px;
+    background-color: #1573d5;
+    color: #fff;
+    font-family: 'Poppings';
+    margin-bottom: 20px;
+    border: 0;
+    border-radius: 10px;
+  }
+
+  .divButtonscansave {
+    position: relative;
+    margin-left: 70%;
+    display: flex;
+    margin-bottom: 20px;
+  }
+
+  .buttonCancel,
+  .buttonSave {
+    position: relative;
+    width: 100px;
+    height: 30px;
+    color: #fff;
+    font-size: large;
+    font-family: 'Poppings';
+    margin: 0 7px 0 7px;
+    border: 0;
+    border-radius: 10px;
+  }
+
+  .buttonSave {
+    background-color: #2B78EB;
+  }
+
+  .buttonCancel {
+    border: 1;
+    color: #151111;
+  }
+
+  .edit-data {
+    margin-top: 7%;
+    display: block;
+  }
+
+  .editdata1 {
+    position: relative;
+    display: flex;
+  }
+
+  .textditata {
+    position: relative;
+    display: flex;
+    margin-left: 5%;
+    font-family: 'Inter';
+    font-weight: 500;
+    font-size: 18px;
+    font-weight: bolder;
+    line-height: 22px;
+    width: 15%;
+  }
+
+  .input-editdatadaRout {
+    margin: auto;
+    position: relative;
+    box-sizing: border-box;
+    background: #FFFFFF;
+    margin-right: 0;
+    border: 1px solid #B9B3B3;
+    height: 40px;
+    width: 20%;
+    border-radius: 15px 0 0 15px;
+  }
+
+  .input-editdata {
+    margin: auto;
+    position: relative;
+    margin-left: 0;
+    box-sizing: border-box;
+    border: 1px solid #B9B3B3;
+    border-radius: 0 15px 15px 0;
+    height: 40px;
+    width: 40%;
+  }
+
+  .myPhotoedit {
+    margin-left: 15%;
+    position: relative;
+    height: 80px;
+    width: 80px;
+  }
+
+ 
+
+  .inputImg {
+    margin: auto;
+    width: auto;
+  }
+
+  .input-editdataemail {
+    padding-left: 6%;
+    border-radius: 15px;
+    margin: 15px auto 15px auto;
+    position: relative;
+    height: 40px;
+    width: 60%;
+    box-sizing: border-box;
+    color: #147ad4;
+    border: 1px solid #B9B3B3;
+  }
+
+  #iconEmail {
+    position: absolute;
+    top: 43%;
+    left: 32%;
+    font-size: 28px;
+  }
+
+  .input-editdataphone1 {
+    margin: auto;
+    position: relative;
+    box-sizing: border-box;
+    background: #FFFFFF;
+    margin-right: 0;
+    border: 1px solid #B9B3B3;
+    height: 40px;
+    width: 5%;
+    border-radius: 15px 0 0 15px;
+  }
+
+  .input-editdataphone {
+    margin: auto;
+    position: relative;
+    margin-left: 0;
+    box-sizing: border-box;
+    border: 1px solid #B9B3B3;
+    border-radius: 0 15px 15px 0;
+    height: 40px;
+    width: 55%;
+  }
+
+
+  .editdataSelect {
+    position: relative;
+    display: flex;
+    margin-top: 15px;
+  }
+
+  /*aqui una vaina xd */
+
+  select {
+    /* Reset Select */
+    appearance: none;
+    margin: auto auto 15px auto;
+    outline: 0;
+    height: 40px;
+    width: 60%;
+    box-shadow: none;
+    box-sizing: border-box;
+    border: 1px solid #B9B3B3;
+    border-radius: 15px;
+    /* Personalize */
+    flex: 1;
+    padding: 0 1em;
+    background-color: var(--darkgray);
+    background-image: none;
+    cursor: pointer;
+  }
+
+  /* Remove IE arrow */
+  select::-ms-expand {
+    display: none;
+  }
+
+  /* Custom Select wrapper */
+  .select {
+    position: relative;
+    display: flex;
+    width: 60%;
+    height: 40px;
+    overflow: hidden;
+    margin: auto;
+  }
+
+  /* Arrow */
+  .select::after {
+    margin: auto auto 15px auto;
+    content: '\25BC';
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1em;
+    background-color: #fff;
+    transition: .25s all ease;
+    box-sizing: border-box;
+    border: 1px solid #B9B3B3;
+    border-radius: 0 15px 15px 0;
+    height: 40px;
+    pointer-events: none;
+  }
+
+  /* Transition */
+  .select:hover::after {
+    color: #969696;
+  }
+
+  .input-editdataAddres {
+    border-radius: 15px;
+    position: relative;
+    height: 40px;
+    box-sizing: border-box;
+    width: 5%;
+    border: 1px solid #B9B3B3;
+    margin-left: 6px;
+    margin-right: 6px;
+
+  }
+
+  .editdata2 {
+    margin: auto;
+    position: relative;
+    display: flex;
+    padding: auto;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+  }
+
+  .conteSecurity {
+    background-color: #fff;
+    margin-top: 5%;
+    width: 100%;
+  }
+
+  .divImgMyProfileSecurity {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    width: 23%;
+    height: 23%;
+  
+  }
+
+  .titleSecurity {
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: bolder;
+    font-size: 36px;
+    line-height: 54px;
+    text-align: center;
+  }
+
+  .subtitleSecurity {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .h3security {
+    position: relative;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    margin-left: 5%;
+    margin-bottom: 20px;
+  }
+
+  .buttonAddService {
+    position: relative;
+    margin-left: 70%;
+    width: 100px;
+    background-color: #147ad4;
+    height: 30px;
+    color: #fff;
+    font-size: large;
+    font-family: 'Poppings';
+    border: 0;
+    border-radius: 10px;
+  }
+  .imgService{
+    width: 50px;
+    height: 50px;
+  }
