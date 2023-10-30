@@ -60,7 +60,8 @@ export class UsersService {
   }
 
     get getdatosPerfil$(): EditData {
-      const objetoString = localStorage.getItem('dataProfile');
+      const objetoString = localStorage.getItem('username');
+      console.log('aqui esta el mobre que me trae xd', objetoString)
       if (objetoString) {
         this.datosPerfil= JSON.parse(objetoString);
       }

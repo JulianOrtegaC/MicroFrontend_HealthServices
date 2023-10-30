@@ -19,7 +19,6 @@ export class ServicesService {
   constructor(private http: HttpClient) {}
 
   crearService(service: Service): Observable<any> {
-    console.log('aqui otra vez el mk servicio' + JSON.stringify(service))
     return this.http.post(
       `${this.myAppUrl}${this.myApiUrl}createService/`,
       service

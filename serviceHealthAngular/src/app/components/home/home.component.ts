@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { ContactService, EditData, Service } from 'src/app/interfaces/cuenta';
+import { RegisterService } from 'src/app/services/register.service';
 import { ServicesService } from 'src/app/services/services.service';
-import { UsersService } from 'src/app/services/users.service';
 import { ViewServiceService } from 'src/app/services/view-service.service';
 
 @Component({
@@ -24,12 +24,12 @@ export class HomeComponent {
   errorfiltre = false;
 
   constructor(
-    private usersService: UsersService,
+    private registerService: RegisterService,
     private servicesService: ServicesService,
     private viewService: ViewServiceService,
     private router: Router
   ) {
-    this.dataProfile = usersService.getdatosPerfil$;
+    this.dataProfile = registerService.getdatosPerfil$;
     if (this.dataProfile.IdUser) {
       this.idActualuser$ = this.dataProfile.IdUser;
     }

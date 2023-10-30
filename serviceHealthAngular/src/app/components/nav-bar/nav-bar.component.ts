@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { assetUrl } from 'src/single-spa/asset-url';
 
 @Component({
   selector: 'app-nav-bar',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./nav-bar.component.css']
 })
 export class NavBarComponent {
+  imgLogo = assetUrl("Logo.png");
+
 
 }
