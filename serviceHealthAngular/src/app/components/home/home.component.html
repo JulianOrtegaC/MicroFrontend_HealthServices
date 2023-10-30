@@ -1,0 +1,129 @@
+<app-nav-bar></app-nav-bar>
+<div class="contDiv">
+  <div class="divFiltros">
+    <div class="filtros">
+      <p class="textFiltro"><strong>Filtros</strong></p>
+      <p class="textFiltro">Reseñas y calificaciones</p>
+      <br />
+      <br />
+      <p class="textFiltro"><strong>Categoria</strong></p>
+      <br />
+      <div class="editdataSelect">
+        <div class="select">
+          <select  [(ngModel)]="filtroCategoria" name="filtroCategoria" id="">
+            <option selected  value="todas">Todas</option>
+            <option value="Transporte y movilidad">
+              Transporte y movilidad
+            </option>
+            <option value="Traducción e interpretación">
+              Traducción e interpretación
+            </option>
+            <option value="Asesoramiento y acompañamiento">
+              Asesoramiento y acompañamiento
+            </option>
+            <option value="Diseño de interiores y arquitectura accesible">
+              Diseño de interiores y arquitectura accesible
+            </option>
+            <option value="Asistencia y cuidado personal">
+              Asistencia y cuidado personal
+            </option>
+            <option value="Tecnología y dispositivos de apoyo">
+              Tecnología y dispositivos de apoyo
+            </option>
+            <option value="Formación y capacitación">
+              Formación y capacitación
+            </option>
+            <option value="Accesibilidad digital">Accesibilidad digital</option>
+            <option value="Turismo y ocio accesibles">
+              Turismo y ocio accesibles
+            </option>
+          </select>
+        </div>
+      </div>
+      <br />
+      <br />
+      <p><strong> Precio/Hora </strong></p>
+      <p *ngIf="errorfiltre" class="errorfiltrer">error en los valores puestos</p>
+      <i class="fa-solid fa-dollar-sign" id="iconDollar"></i>
+      <input
+        type="number"
+        class="input-editdataPrice"
+        placeholder="Precio Minimo"
+        name="filtroPriceMin"
+         [(ngModel)]="filtroPriceMin"
+
+      />
+      <i class="fa-solid fa-dollar-sign" id="iconDollar2"></i>
+      <input
+        type="number"
+        class="input-editdataPrice"
+        placeholder="Precio Maximo"
+        name="filtroPriceMax"
+        [(ngModel)]="filtroPriceMax"
+      />
+      <button class="buttonappfiltre" (click)="appFiltro()">Aplicar Filtro</button>
+      <br>
+      <button class="buttoncancelfiltre" (click)="cancelFiltro()">Cancelar Filtros</button>
+
+    </div>
+  </div>
+  <div class="divRight">
+    <div class="divSelectOrder">
+      <p class="textOrder">Ordenar por :</p>
+      <button
+        class="buttonfiltrer"
+        [ngClass]="{ selected: selectedButton === 'masSolicitado' }"
+        (click)="selectButton('masSolicitado')"
+      >
+        Mas Solicitado
+      </button>
+      <button
+        class="buttonfiltrer"
+        [ngClass]="{ selected: selectedButton === 'precioBajo' }"
+        (click)="selectButton('precioBajo')"
+      >
+        Precio más bajo
+      </button>
+      <button
+        class="buttonfiltrer"
+        [ngClass]="{ selected: selectedButton === 'precioAlto' }"
+        (click)="selectButton('precioAlto')"
+      >
+        Precio más alto
+      </button>
+    </div>
+
+    <div class="contenedorServicios">
+      <div
+        *ngFor="
+          let publi of listaPublicaciones | orderByPrecio : ordenarPrecioBajo
+        "
+      >
+        <div
+          class="contend-service"
+          *ngIf="publi.idUser != idActualuser$"
+          (click)="mostrarModalVerServicio(publi)"
+        >
+          <div class="divimgService">
+            <img
+              src="{{ obtenerURLImagen(publi.pathPhotos) }}"
+              alt="Imagen del botón"
+              class="imgService"
+            />
+          </div>
+          <div class="conte">
+            <p class="valorService">{{ publi.initialPrice }} COP/hora</p>
+            <p class="titleService">{{ publi.nameService }}</p>
+            <p class="descriptionService">
+              {{ publi.preview }}
+            </p>
+            <p class="puntuacionService">
+              <i class="fa-solid fa-star" style="color: #ffffff"></i>4.8
+            </p>
+            <p class="contratadoService">| contratado : # veces</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

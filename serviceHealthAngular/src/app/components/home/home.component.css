@@ -1,0 +1,285 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;600;0,700;1,600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap");
+
+.contDiv {
+  position: absolute;
+  display: flex;
+  width: 98vw;
+  height: 90vh;
+}
+/* aqui inicia el div de los filtros */
+.divFiltros {
+  position: relative;
+  display: flex;
+  width: 400px;
+  max-width: 800px;
+  height: 100%;
+}
+.filtros {
+  display: block;
+  width: 80%;
+  padding: 15px;
+  margin: 5px;
+  border: 2px;
+  border: 1px solid #b9b3b3;
+  border-radius: 20px;
+}
+.textFiltro {
+  margin: auto;
+}
+.checkTipo {
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 0;
+}
+
+.input-editdataPrice {
+  padding-left: 6%;
+  border-radius: 15px;
+  margin: 0 auto 15px auto;
+  position: relative;
+  height: 40px;
+  width: 90%;
+  padding-left: 10%;
+  box-sizing: border-box;
+  border: 1px solid #b9b3b3;
+}
+#iconEmail {
+  font-size: 28px;
+}
+#iconDollar {
+  position: absolute;
+  color: #1684ac;
+  /* left: 10%;
+  top: 45.7%; */
+  top: 306px;
+  left: 10%;
+  z-index: 90;
+}
+#iconDollar2 {
+  position: absolute;
+  color: #1684ac;
+  /* left: 10%;
+  top: 54%; */
+  left: 10%;
+  top: 361px;
+  z-index: 91;
+}
+.errorfiltrer{
+  position: absolute;
+  left: 10%;
+  top: 267px;
+  z-index: 91;
+  color: red;
+}
+.editdataSelect {
+  position: relative;
+  display: flex;
+}
+select {
+  /* Reset Select */
+  position: relative;
+  display: inline;
+  appearance: none;
+  outline: 0;
+  height: 40px;
+  border: 1px solid #b9b3b3;
+  background-color: #b9b3b3;
+  width: 90%;
+  border-radius: 15px;
+  /* Personalize */
+  flex: 5;
+  padding: 0 1em;
+  background-color: var(--darkgray);
+  cursor: pointer;
+}
+select::-ms-expand {
+  display: none;
+}
+
+/* Custom Select wrapper */
+.select {
+  position: relative;
+  display: flex;
+  width: 90%;
+  overflow: hidden;
+}
+
+/* Arrow */
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1em;
+  background-color: #fff;
+  transition: 0.25s all ease;
+  box-sizing: border-box;
+  border: 1px solid #b9b3b3;
+  color: #b9b3b3;
+  border-radius: 0 15px 15px 0;
+  height: 40px;
+  pointer-events: none;
+}
+
+/* Transition */
+.select:hover::after {
+  color: #969696;
+}
+
+.buttonfiltrer {
+  height: 35px;
+  margin-left: 5px;
+  background: #ffffff;
+  border: 1px solid #b9b3b3;
+  border-radius: 15px;
+}
+.buttonappfiltre {
+  height: 40px;
+  width: 60%;
+  margin: auto;
+  background: #2389e2;
+  border: 1px solid #b9b3b3;
+  border-radius: 12px;
+  color: #fff;
+}
+.buttoncancelfiltre {
+  height: 40px;
+  width: 60%;
+  margin-top: 30px;
+  background: #fff;
+  border: 1px solid #b9b3b3;
+  border-radius: 12px;
+  color: #000;
+}
+.selected {
+  background-color: #2389e2; /* Cambia el color como desees */
+  color: #ffffff; /* Cambia el color del texto si es necesario */
+}
+/* aqui termina el div de los filtros */
+
+/* inicio del div de productos */
+.divRight {
+  position: relative;
+  width: 100%;
+}
+.divSelectOrder {
+  display: flex;
+  float: right;
+  padding-right: 20%;
+}
+.selectOrder {
+  /* Reset Select */
+  appearance: none;
+  margin: auto auto 15px 15px;
+  outline: 0;
+  height: 40px;
+  box-shadow: none;
+  box-sizing: border-box;
+  border: 1px solid #b9b3b3;
+  border-radius: 15px;
+  /* Personalize */
+  flex: 1;
+  padding: 0 1em;
+  background-color: var(--darkgray);
+  background-image: none;
+  cursor: pointer;
+}
+
+.textOrder {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+}
+.contenedorServicios {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.contend-service {
+  position: relative;
+
+  margin: 20px;
+  background-color: #e1dede;
+  width: 300px;
+  border-radius: 15px;
+  padding-bottom: 5px;
+}
+.divimgService {
+  display: flex;
+  margin: 10px;
+  cursor: pointer;
+}
+.imgService {
+  margin: auto;
+  max-width: 300px;
+  max-height: 200px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.conte {
+  position: relative;
+  display: block;
+  background: #ffffff;
+  border-radius: 10px;
+  margin: 5px;
+  padding-bottom: 5px;
+  cursor: pointer;
+}
+
+.valorService {
+  position: relative;
+  margin-left: 30px;
+  width: 181px;
+  height: 32px;
+  font-family: "Poppins";
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 0;
+}
+.titleService {
+  position: relative;
+  width: 207px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-size: 18px;
+  margin-left: 30px;
+  margin-bottom: 0;
+}
+.descriptionService {
+  position: relative;
+  width: 207px;
+  margin-left: 30px;
+
+  font-family: "Poppins";
+  font-style: normal;
+  font-size: 15px;
+}
+.puntuacionService {
+  text-align: center;
+  box-sizing: border-box;
+  background: #1684ac;
+  border: 1px solid #1684ac;
+  border-radius: 15px;
+  color: #ffffff;
+  margin-left: 30px;
+  margin-bottom: 5px;
+  display: inline;
+  padding: 2px 10px 2px 10px;
+}
+.contratadoService {
+  display: inline;
+  width: 174px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-size: 13px;
+  line-height: 20px;
+  margin-left: 50px;
+
+  color: #615e5e;
+}
+
+/* Fin div de productos */
