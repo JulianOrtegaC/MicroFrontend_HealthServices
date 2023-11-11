@@ -9,13 +9,11 @@ export const AppRouter = () => {
   return (
     <Routes>
       <Route index element={<Login />} />
-      <Route path="" element={<Login />} />
-      <Route path="/" element={<Login />} />
+      <Route path="/login" element={<Login />} />
       <Route path="/Register" element={<Register />} />
       <Route element={<ProtectedRoutes />}>
-        <Route path="/Home" element={<Home />} />
+        <Route path="/homeprueba" element={<Home />} />
       </Route>
-      <Route path="*" element={<Error404 />} />
     </Routes>
   );
 };

@@ -45,9 +45,12 @@ export const AuthEmail = () => {
       post(url, options)
         .then((response) => {
           if (response.error === false) {
+            console.log("aqui si entro")
             saveToken(response.token);
             saveUser(response.user);
-            nav("/Home");
+            nav("/home");
+            // navigateToUrl("/homeprueba");
+            window.location.replace("/home");
           } else {
             setStateError();
           }

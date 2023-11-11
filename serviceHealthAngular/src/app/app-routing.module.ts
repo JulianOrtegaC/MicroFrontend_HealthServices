@@ -16,8 +16,6 @@ const routes: Routes = [
   {path: 'addService', component:AddServiceComponent},
   {path: 'viewService',component:ViewServiceComponent,canActivate:[GuardGuard]},
 
-  {path: '', redirectTo:'/about' , pathMatch:'full'},
-  {path: "**",redirectTo:'/about' , pathMatch:'full'},
 
 ];
 @NgModule({
