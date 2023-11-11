@@ -43,8 +43,12 @@
     "webpack-merge": "^5.8.0"
   },
   "dependencies": {
+    "@react-oauth/google": "^0.11.1",
+    "bootstrap": "^5.3.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-google-recaptcha": "^3.1.0",
+    "react-router-dom": "^6.18.0",
     "single-spa-react": "^4.3.1"
   }
 }

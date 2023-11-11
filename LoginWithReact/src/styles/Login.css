@@ -1,0 +1,231 @@
+body {
+    width: 100%;
+    height: 100%;
+    box-sizing: none;
+}
+
+hr {
+    margin: 5px 0;
+}
+
+.principalContainer {
+    width: 100%;
+    background-image: url(../assets/bg-login.jpg);
+    background-size: cover;
+    height: 100vh;
+}
+
+.contenedorLogin {
+    display: flex;
+    align-items: center;
+    width: 30%;
+    margin: auto;
+    height: 100vh;
+}
+
+.divFormulario {
+    width: 100%;
+    padding: 2vh 2vw;
+    border: 2px;
+    border-color: #4F709C;
+    border-style: solid;
+    border-radius: 8px;
+    background-color: white;
+}
+
+.textLogin {
+    text-align: center;
+    font-style: normal;
+    color: #0E3A66;
+    font-size: 26px;
+}
+
+.form {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+.form-control {
+    margin-bottom: 0px;
+    margin: 10px 0 0 0;
+    flex: 1;
+    padding: 5px 10px;
+    font-size: 12px;
+}
+
+.form-control::placeholder {
+    color: rgb(158, 165, 172);
+}
+
+.form-control-register {
+    margin: 0 0 10px 0;
+}
+
+.label-form-register {
+    width: 100%;
+    text-align: left;
+    font-size: small;
+    padding: 0;
+    margin: 0;
+}
+
+.select-options-forms {
+    width: 100%;
+    margin-bottom: 10px;
+    border-color: #dee2e6;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: small;
+}
+
+
+#iconEyeSlash {
+    position: absolute;
+    right: 2%;
+    cursor: pointer;
+    top: 18%;
+    z-index: 1000;
+    color: "#9ea5ac";
+    font-size: 1em;
+    font-weight: 500;
+}
+
+#iconEyeSlashRegister {
+    position: absolute;
+    right: 3%;
+    cursor: pointer;
+    top: 82%;
+    z-index: 1000;
+    color: "#9ea5ac";
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.btn-login {
+    position: relative;
+    width: 100%;
+    padding: 5px 0;
+    color: white;
+    background: #0E3A66;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+    font-size: 12px;
+}
+
+.btn-login:hover {
+    background: #4F709C;
+}
+
+.msg-forgot-password {
+    font-style: normal;
+    margin: 5px 0;
+    padding: 0;
+    text-align: end;
+    font-size: 12px;
+}
+
+.msg-forgot-password a {
+    color: #0E3A66;
+    text-decoration: none;
+}
+
+.back-to-login {
+    font-style: normal;
+    margin: 5px 0;
+    padding: 0;
+    font-size: 13px;
+}
+
+.back-to-login a {
+    color: #0E3A66;
+    text-align: center;
+}
+
+.btn-facebook {
+    padding: 8px;
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    background-color: #0E3A66;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+.btn-facebook:hover {
+    background-color: #4F7397;
+}
+
+.btn-google {
+    width: 10%;
+}
+
+.alert-error {
+    position: relative;
+    width: 100%;
+    padding: 5px 0;
+    color: white;
+    background: #dc3545;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 12px;
+    text-align: center;
+}
+
+.alert {
+    font-size: 12px;
+    text-align: center;
+}
+
+.select-container {
+    display: flex;
+    width: 100%;
+}
+
+.select-wrapper {
+    flex-grow: 1;
+    /* Los campos de selección ocuparán todo el espacio disponible */
+    margin-right: 10px;
+    /* Espacio entre los campos de selección */
+}
+
+.select-options-forms {
+    width: 100%;
+}
+
+/* Menos de 480px */
+@media screen and (width <=479px) {
+    .contenedorLogin {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    #gwd-reCAPTCHA_2,
+    #rc-imageselect {
+        transform: scale(0.7);
+        transform-origin: 0 0;
+    }
+}
+
+@media screen and (width >=480px) and (width <=599px) {
+    .contenedorLogin {
+        width: 70%;
+    }
+}
+
+@media screen and (width >=600px) and (width <=799px) {
+    .contenedorLogin {
+        width: 60%;
+    }
+}
+
+@media screen and (width >=800px) and (width <=1200px) {
+    .contenedorLogin {
+        width: 50%;
+    }
+}

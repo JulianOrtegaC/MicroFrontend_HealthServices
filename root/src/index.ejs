@@ -42,11 +42,15 @@
   <script type="systemjs-importmap">
     {
       "imports": {
-        "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.9.0/lib/system/single-spa.min.js"
+        "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.9.0/lib/system/single-spa.min.js",
+        "react": "https://cdn.jsdelivr.net/npm/react@18.2.0/umd/react.production.min.js",
+          "react-dom": "https://cdn.jsdelivr.net/npm/react-dom@18.2.0/umd/react-dom.production.min.js"
       }
     }
+    
   </script>
-  <link rel="preload" href="https://cdn.jsdelivr.net/npm/single-spa@5.9.0/lib/system/single-spa.min.js" as="script">
+
+
 
   <!-- Add your organization's prod import map URL to this script's src  -->
   <!-- <script type="systemjs-importmap" src="/importmap.json"></script> -->
@@ -56,7 +60,8 @@
     {
       "imports": {
         "@uptc/root-config": "//localhost:9000/uptc-root-config.js",
-        "@uptc/serviceHealthAngular": "http://localhost:4200/main.js"
+        "@uptc/serviceHealthAngular": "http://localhost:4200/main.js",
+        "@uptc/LoginWithReact": "http://localhost:8080/uptc-LoginWithReact.js"
       }
     }
   </script>
