@@ -9,6 +9,7 @@ import { assetUrl } from 'src/single-spa/asset-url';
 export class AboutUsComponent {
   imgAbout1 = assetUrl("about1.png");
   imgAbout2 = assetUrl("about2.png");
+  
 
 
 }

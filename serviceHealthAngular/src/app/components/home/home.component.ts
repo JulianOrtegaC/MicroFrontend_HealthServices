@@ -29,6 +29,10 @@ export class HomeComponent {
     private viewService: ViewServiceService,
     private router: Router
   ) {
+
+    console.log("aqui esta el nombre y el token");
+    console.log("tonken: " +localStorage.getItem('token'));
+    console.log("nombre: " +localStorage.getItem('username'));
     registerService.dataquemada();
     this.dataProfile = registerService.getdatosPerfil$;
     if (this.dataProfile.IdUser) {
