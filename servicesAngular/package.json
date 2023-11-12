@@ -1,5 +1,5 @@
 {
-  "name": "service-health-angular",
+  "name": "services-angular",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -7,8 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "build:single-spa:serviceHealthAngular": "ng build serviceHealthAngular --configuration production",
-    "serve:single-spa:serviceHealthAngular": "ng s --project serviceHealthAngular --disable-host-check --port 4200 --live-reload false"
+    "build:single-spa:servicesAngular": "ng build servicesAngular --configuration production",
+    "serve:single-spa:servicesAngular": "ng s --project servicesAngular --disable-host-check --port 4200 --live-reload false"
   },
   "private": true,
   "dependencies": {
@@ -17,13 +17,12 @@
     "@angular/common": "^15.2.0",
     "@angular/compiler": "^15.2.0",
     "@angular/core": "^15.2.0",
-    "@angular/fire": "^16.0.0",
+    "@angular/fire": "^7.6.1",
     "@angular/forms": "^15.2.0",
     "@angular/material": "^15.2.8",
     "@angular/platform-browser": "^15.2.0",
     "@angular/platform-browser-dynamic": "^15.2.0",
     "@angular/router": "^15.2.0",
-    "firebase": "^10.5.2",
     "rxjs": "~7.8.0",
     "single-spa": ">=4.0.0",
     "single-spa-angular": "^8.1.1",

@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "serviceHealthAngular": {
+    "servicesAngular": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -11,9 +11,9 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-builders/custom-webpack:browser",
           "options": {
-            "outputPath": "dist/service-health-angular",
+            "outputPath": "dist/services-angular",
             "index": "src/index.html",
             "main": "src/main.single-spa.ts",
             "polyfills": [
@@ -30,7 +30,7 @@
             "scripts": [],
             "customWebpackConfig": {
               "path": "extra-webpack.config.js",
-              "libraryName": "serviceHealthAngular",
+              "libraryName": "servicesAngular",
               "libraryTarget": "umd"
             },
             "deployUrl": "http://localhost:4200/"
@@ -67,10 +67,10 @@
           "builder": "@angular-builders/custom-webpack:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "serviceHealthAngular:build:production"
+              "browserTarget": "servicesAngular:build:production"
             },
             "development": {
-              "browserTarget": "serviceHealthAngular:build:development"
+              "browserTarget": "servicesAngular:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -78,7 +78,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "serviceHealthAngular:build"
+            "browserTarget": "servicesAngular:build"
           }
         },
         "test": {
@@ -97,6 +97,13 @@
               "src/styles.css"
             ],
             "scripts": []
+          }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "version": 2,
+            "browserTarget": "servicesAngular:build:production"
           }
         }
       }

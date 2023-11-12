@@ -17,6 +17,8 @@ import { HomeComponent } from './components/home/home.component';
 import { OrderByPrecioPipe } from './components/home/order-by-precio.pipe';
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { ViewServiceComponent } from './components/view-service/view-service.component';
+import { provideAuth,getAuth } from '@angular/fire/auth';
+import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 
 
 
@@ -40,7 +42,9 @@ import { ViewServiceComponent } from './components/view-service/view-service.com
     HttpClientModule,
     SharedModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
-    provideStorage(() => getStorage())
+    provideStorage(() => getStorage()),
+    provideAuth(() => getAuth()),
+    provideFirestore(() => getFirestore())
   ],
   providers: [GuardGuard],
   bootstrap: [AppComponent]

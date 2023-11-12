@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "storagemarketdisca": {
+      "hosting": {
+        "servicesAngular": [
+          "storagemarketdisca"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "storagemarketdisca"
+  }
+}
