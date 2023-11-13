@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "servicesAngular": {
+    "servicesWithAngular": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-builders/custom-webpack:browser",
           "options": {
-            "outputPath": "dist/services-angular",
+            "outputPath": "dist/servicesWithAngular",
             "index": "src/index.html",
             "main": "src/main.single-spa.ts",
             "polyfills": [
@@ -30,7 +30,7 @@
             "scripts": [],
             "customWebpackConfig": {
               "path": "extra-webpack.config.js",
-              "libraryName": "servicesAngular",
+              "libraryName": "servicesWithAngular",
               "libraryTarget": "umd"
             },
             "deployUrl": "http://localhost:4200/"
@@ -67,10 +67,10 @@
           "builder": "@angular-builders/custom-webpack:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "servicesAngular:build:production"
+              "browserTarget": "servicesWithAngular:build:production"
             },
             "development": {
-              "browserTarget": "servicesAngular:build:development"
+              "browserTarget": "servicesWithAngular:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -78,7 +78,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "servicesAngular:build"
+            "browserTarget": "servicesWithAngular:build"
           }
         },
         "test": {
@@ -97,13 +97,6 @@
               "src/styles.css"
             ],
             "scripts": []
-          }
-        },
-        "deploy": {
-          "builder": "@angular/fire:deploy",
-          "options": {
-            "version": 2,
-            "browserTarget": "servicesAngular:build:production"
           }
         }
       }
