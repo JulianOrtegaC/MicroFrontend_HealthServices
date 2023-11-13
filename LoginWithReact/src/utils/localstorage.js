@@ -15,6 +15,8 @@ export function getUser() {
 }
 
 export function saveUser(user) {
+  
+  localStorage.setItem("data_user", JSON.stringify(user));
   localStorage.setItem("ID_user", user.idUser);
   localStorage.setItem("username", user.nameUser);
 }
@@ -22,4 +24,8 @@ export function saveUser(user) {
 export function removeUser() {
   localStorage.removeItem("ID_user");
   localStorage.removeItem("username");
+}
+
+export function setDatosProfile(data) {
+  localStorage.setItem('dataProfile' ,JSON.stringify(data));
 }

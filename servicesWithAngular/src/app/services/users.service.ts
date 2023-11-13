@@ -44,7 +44,7 @@ export class UsersService {
 
     const imagesRef = ref(
       this.storage,
-      `images/${this.infoData.Email}/Profile/photo.png`
+      `images/${this.infoData.emailUser}/Profile/photo.png`
     );
     try {
       const url = await getDownloadURL(imagesRef);
@@ -61,7 +61,6 @@ export class UsersService {
 
     get getdatosPerfil$(): EditData {
       const objetoString = localStorage.getItem('username');
-      console.log('aqui esta el mobre que me trae xd', objetoString)
       if (objetoString) {
         this.datosPerfil= JSON.parse(objetoString);
       }

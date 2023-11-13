@@ -43,9 +43,9 @@ export class ProfileComponent implements OnInit, AfterViewInit {
 
   // Data Nueva nueva
   updateModel: EditData = {
-    NameUser: '',
-    Email: '',
-    Telephone: '',
+    nameUser: '',
+    emailUser: '',
+    telephoneUser: '',
     // Inicializar otros campos aquí
   };
   xd!: string;
@@ -96,18 +96,18 @@ export class ProfileComponent implements OnInit, AfterViewInit {
   paginator!: MatPaginator;
 
   getRequest() {
-    if (this.dataProfile.IdUser)
+    if (this.dataProfile.idUser)
       this.servicesService
-        .getMyRequest(this.dataProfile.IdUser)
+        .getMyRequest(this.dataProfile.idUser)
         .subscribe((data) => {
           this.dataSource = new MatTableDataSource<RequestService>(data);
           this.dataSource.paginator = this.paginator;
         });
   }
   getServices() {
-    if (this.dataProfile.IdUser)
+    if (this.dataProfile.idUser)
       this.servicesService
-        .getMyServices(this.dataProfile.IdUser)
+        .getMyServices(this.dataProfile.idUser)
         .subscribe((data) => {
           this.dataSource = new MatTableDataSource<Service>(data);
           this.dataSource.paginator = this.paginator;
@@ -241,7 +241,7 @@ export class ProfileComponent implements OnInit, AfterViewInit {
     if (this.changeImg == true) {
       const imgRef = ref(
         this.storage,
-        `images/${this.dataProfile.Email}/Profile/photo.png`
+        `images/${this.dataProfile.emailUser}/Profile/photo.png`
       );
       uploadBytes(imgRef, this.file)
         .then((respose) => {
@@ -250,8 +250,8 @@ export class ProfileComponent implements OnInit, AfterViewInit {
       this.dataProfile.Photo = this.imageURL = this.imageURL ?? '';
     }
     var id = '';
-    if (this.dataProfile.IdUser != null) {
-      var id = this.dataProfile.IdUser;
+    if (this.dataProfile.idUser != null) {
+      var id = this.dataProfile.idUser;
     }
 
     this.updateModel.Photo = this.imageURL = this.imageURL ?? '';

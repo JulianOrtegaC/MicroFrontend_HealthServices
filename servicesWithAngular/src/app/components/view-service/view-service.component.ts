@@ -47,7 +47,7 @@ export class ViewServiceComponent {
   }
   solicitar(xd: Service) {
     const request: RequestService = {
-      userIdUser: this.dataProfile.IdUser,
+      userIdUser: this.dataProfile.idUser,
       serviceIdService: xd.idService,
       status: 'solicitado',
     };

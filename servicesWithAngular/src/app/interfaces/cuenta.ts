@@ -11,17 +11,17 @@ export interface Registro {
 
 
 export interface EditData {
-    IdUser?:string;
-    NameUser?: string;
-    LastNameUser?: string;
-    Address?: string;
-    Telephone?: string;
-    Email?: string;
-    TypeDocument?: string;
-    Gender?: string;
+    idUser?:string;
+    nameUser?: string;
+    lastnameUser?: string;
+    addressUser?: string;
+    telephoneUser?: string;
+    emailUser?: string;
+    typeDocument?: string;
+    gender?: string;
     Photo?: string;
     CoverPhoto?: string;
-    BirthDate?: string;
+    birthdate?: string;
 }
 export interface Service{
     idUser?:string;

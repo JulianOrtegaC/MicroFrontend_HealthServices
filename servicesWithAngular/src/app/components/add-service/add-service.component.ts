@@ -100,7 +100,7 @@ export class AddServiceComponent implements OnInit {
     for (let index = 0; index < this.file.length; index++) {
       const imgRef = ref(
         this.storage,
-        `images/${this.infoData.Email}/services/${this.nameService}/${this.file[index].name}`
+        `images/${this.infoData.emailUser}/services/${this.nameService}/${this.file[index].name}`
       );
   
       try {
@@ -122,7 +122,7 @@ export class AddServiceComponent implements OnInit {
         address: this.address,
         datesDispo: this.datesDispo,
         preview: this.preview,
-        idUser:this.registerService.getdatosPerfil$.IdUser,
+        idUser:this.registerService.getdatosPerfil$.idUser,
         dispo:this.dispo,
       };
   console.log("este es el servicio a agregar"+dataService)
@@ -140,7 +140,7 @@ export class AddServiceComponent implements OnInit {
   }
   
   async getImages() {
-    const imagesRef = ref(this.storage, `images/${this.infoData.Email}/services/${this.nameService}`);
+    const imagesRef = ref(this.storage, `images/${this.infoData.emailUser}/services/${this.nameService}`);
   
     try {
       const response = await listAll(imagesRef);

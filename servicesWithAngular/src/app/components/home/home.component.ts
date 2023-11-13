@@ -32,11 +32,12 @@ export class HomeComponent {
 
     console.log("aqui esta el nombre y el token");
     console.log("tonken: " +localStorage.getItem('token'));
-    console.log("nombre: " +localStorage.getItem('username'));
-    registerService.dataquemada();
+    console.log("nombre: " +localStorage.getItem('ID_user'));
+    console.log("data user xd: " +localStorage.getItem('data_user'));
+    // registerService.dataquemada();
     this.dataProfile = registerService.getdatosPerfil$;
-    if (this.dataProfile.IdUser) {
-      this.idActualuser$ = this.dataProfile.IdUser;
+    if (this.dataProfile.idUser) {
+      this.idActualuser$ = this.dataProfile.idUser;
     }
     this.getServices();
   }

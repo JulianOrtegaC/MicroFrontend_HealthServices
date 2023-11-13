@@ -43,12 +43,12 @@ export const AuthEmail = () => {
       };
 
       post(url, options)
-        .then((response) => {
-          if (response.error === false) {
-            saveToken(response.token);
-            saveUser(response.user);
-            nav("/home");
-            window.location.replace("/home");
+      .then((response) => {
+         if (response.error === false) {
+           saveToken(response.token);
+           saveUser(response.user);
+           nav("/home");
+           window.location.replace("/home");
           } else {
             setStateError();
           }

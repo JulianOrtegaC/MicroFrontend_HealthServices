@@ -19,7 +19,7 @@
                 <!-- <img src="{{imgProfile}}" alt="" class="imgMyProfile"> -->
                 <img src="{{imgProfile}}" alt="" class="imgMyProfile">
             </div>
-            <p class="text-nameS">{{dataProfile.NameUser}} {{dataProfile.LastNameUser}}</p>
+            <p class="text-nameS">{{dataProfile.nameUser}} {{dataProfile.lastnameUser}}</p>
         </div>
         <div class="prof">
             <button (click)="showProfile()" class="profile-button">
@@ -187,8 +187,8 @@ eliminar
                 <h3 class="textditata">Nombre de Usuario</h3>
                 <input type="text" class="input-editdatadaRout" disabled style="text-align: right;"
                     placeholder="AccesAbility.com/" [(ngModel)]="xd" name="xd">
-                <input type="text" [disabled]="!editData" class="input-editdata" placeholder="{{dataProfile.NameUser}}"
-                    [(ngModel)]="updateModel.NameUser" name="newNameUser">
+                <input type="text" [disabled]="!editData" class="input-editdata" placeholder="{{dataProfile.nameUser}}"
+                    [(ngModel)]="updateModel.nameUser" name="newNameUser">
             </div>
             <mat-divider class="matdividerProfile"></mat-divider>
             <div class="editdata1">
@@ -202,16 +202,16 @@ eliminar
             <mat-divider class="matdividerProfile"></mat-divider>
             <div class="editdata1">
                 <h3 class="textditata">Email</h3>
-                <input type="text" [disabled]="!editData" class="input-editdataemail" [(ngModel)]="updateModel.Email"
-                    placeholder="{{dataProfile.Email}}" name="newEmailUser">
+                <input type="text" [disabled]="!editData" class="input-editdataemail" [(ngModel)]="updateModel.emailUser"
+                    placeholder="{{dataProfile.emailUser}}" name="newEmailUser">
                 <i class=" fa-lg fa-solid fa-envelope" id="iconEmail"></i>
             </div>
             <mat-divider class="matdividerProfile"></mat-divider>
             <div class="editdata1">
                 <h3 class="textditata">Teléfono</h3>
                 <input type="text" class="input-editdataphone1" disabled placeholder="+57">
-                <input type="text" class="input-editdataphone" [disabled]="!editData" [(ngModel)]="updateModel.Telephone"
-                    placeholder="{{dataProfile.Telephone}}" name="newTehephoneUser">
+                <input type="text" class="input-editdataphone" [disabled]="!editData" [(ngModel)]="updateModel.telephoneUser"
+                    placeholder="{{dataProfile.telephoneUser}}" name="newTehephoneUser">
             </div>
             <mat-divider class="matdividerProfile"></mat-divider>
             <div class="editdataSelect">
@@ -226,7 +226,7 @@ eliminar
                 <h3 class="textditata">Ciudad</h3>
                 <div class="select">
                     <select class="selectAddress" name="ciudad" id="" [disabled]="!editData"
-                        [(ngModel)]="dataProfile.Address"></select>
+                        [(ngModel)]="dataProfile.addressUser"></select>
                 </div>
             </div>
             <div class="editdata1">

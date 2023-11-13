@@ -25,7 +25,6 @@ export const AuthGoogle = () => {
 
       post(url, options)
         .then((response) => {
-          console.log(response);
           if (response.error === false) {
             saveToken(response.token);
             saveUser(response.user);

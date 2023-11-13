@@ -39,7 +39,7 @@ export class RegisterService {
   }
 
   get getdatosPerfil$(): EditData {
-      const objetoString = localStorage.getItem('dataProfile');
+      const objetoString = localStorage.getItem('data_user');
       if (objetoString) {
         this.datosPerfil= JSON.parse(objetoString);
       }
@@ -54,21 +54,21 @@ export class RegisterService {
     return localStorage.getItem('token');
   }
 
-  dataquemada(){
-    const ejemploDatos: EditData = {
-      IdUser: "1",
-      NameUser: "Juan",
-      LastNameUser: "Pérez",
-      Address: "123 Calle Principal",
-      Telephone: "555-555-5555",
-      Email: "juan.perez@example.com",
-      TypeDocument: "DNI",
-      Gender: "Masculino",
-      Photo: "https://content.wepik.com/statics/20906796/preview-page0.jpg",
-      CoverPhoto: "https://i.pinimg.com/736x/5e/9a/c6/5e9ac63909b062e1d7b67e30e1dee7b0.jpg",
-      BirthDate: "1990-05-15"
-  };
-  this.setDatosProfile(ejemploDatos);
+  // dataquemada(){
+  //   const ejemploDatos: EditData = {
+  //     IdUser: "1",
+  //     NameUser: "Juan",
+  //     LastNameUser: "Pérez",
+  //     Address: "123 Calle Principal",
+  //     Telephone: "555-555-5555",
+  //     Email: "juan.perez@example.com",
+  //     TypeDocument: "DNI",
+  //     Gender: "Masculino",
+  //     Photo: "https://content.wepik.com/statics/20906796/preview-page0.jpg",
+  //     CoverPhoto: "https://i.pinimg.com/736x/5e/9a/c6/5e9ac63909b062e1d7b67e30e1dee7b0.jpg",
+  //     BirthDate: "1990-05-15"
+  // };
+  // this.setDatosProfile(ejemploDatos);
  
-  }
+  // }
 }
