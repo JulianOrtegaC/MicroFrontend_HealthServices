@@ -24,9 +24,9 @@ export interface EditData {
     birthdate?: string;
 }
 export interface Service{
-    idUser?:string;
+    numberDocumentUser?:string;
     idService ?:string;
-    categoria:string;
+    categorie:string;
     nameService:string;
     description :string;
     preview:string;
@@ -50,12 +50,12 @@ export interface RequestService{
 }
 
 export interface Department{
-    codigodepartamento: number;
-    nombredepartamento: string;
+    codeDepartment: number;
+    nameDepartment: string;
   }
   export interface City{
-    idmunicipios: number;
-    nombremunicipio: string;
-    codigodepartamento: number;
+    idCity: number;
+    nameCity: string;
+    codeDepartment: number;
   }
   

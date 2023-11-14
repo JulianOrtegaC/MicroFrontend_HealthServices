@@ -3,17 +3,24 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  firebase: {
-    projectId: 'storagemarketdisca',
-    appId: '1:223646324820:web:0fcb6e6089955b1c68b5c1',
-    storageBucket: 'storagemarketdisca.appspot.com',
-    locationId: 'us-central',
-    apiKey: 'AIzaSyBcmOBtGXq5SYJKJg8P8DDDZNyixtPDOvU',
-    authDomain: 'storagemarketdisca.firebaseapp.com',
-    messagingSenderId: '223646324820',
-  },
+  // Import the functions you need from the SDKs you need
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+ firebase : {
+  apiKey: "AIzaSyBcmOBtGXq5SYJKJg8P8DDDZNyixtPDOvU",
+  authDomain: "storagemarketdisca.firebaseapp.com",
+  projectId: "storagemarketdisca",
+  storageBucket: "storagemarketdisca.appspot.com",
+  messagingSenderId: "223646324820",
+  appId: "1:223646324820:web:0fcb6e6089955b1c68b5c1"
+},
+
+// Initialize Firebase
   production: false,
-  endpoint: 'https://localhost:7183'
+  endpoint: 'https://localhost:7183',
+  urlAPIMicroServicesUser:"https://projectmicroservicesusersapi.azurewebsites.net/", 
 };
 
 /*

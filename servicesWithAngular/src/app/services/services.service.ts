@@ -9,7 +9,9 @@ import { BehaviorSubject, Observable } from 'rxjs';
 })
 export class ServicesService {
   private myAppUrl: string = environment.endpoint;
+  private microUsers: string = environment.urlAPIMicroServicesUser;
   private myApiUrl: string = '/api/services/';
+  private myApiUsers: string = '/api/MyUser/';
   private myApiUrlR: string = '/api/request/';
   userID = '';
   private userID$ = new BehaviorSubject<string>(this.userID);
@@ -32,8 +34,9 @@ export class ServicesService {
   getMyServices( idUser:string): Observable<any> {
     return this.http.get(`${this.myAppUrl}${this.myApiUrl}listServicesByIdUser?idUser=${idUser}`);
   }
-  getContactServices( idService:string): Observable<any> {
-    return this.http.get(`${this.myAppUrl}${this.myApiUrl}dataContactService?idService=${idService}`);
+  getContactServices( number_document:string): Observable<any> {
+    // return this.http.get(`${this.microUsers}${this.myApiUsers}dataContactService?number_document=${number_document}`);
+    return this.http.get(`https://localhost:7137${this.myApiUsers}dataContactService?number_document=${number_document}`);
   }
 
   crearRequest(request: RequestService): Observable<any> {

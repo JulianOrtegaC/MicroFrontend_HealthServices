@@ -30,10 +30,6 @@ export class HomeComponent {
     private router: Router
   ) {
 
-    console.log("aqui esta el nombre y el token");
-    console.log("tonken: " +localStorage.getItem('token'));
-    console.log("nombre: " +localStorage.getItem('ID_user'));
-    console.log("data user xd: " +localStorage.getItem('data_user'));
     // registerService.dataquemada();
     this.dataProfile = registerService.getdatosPerfil$;
     if (this.dataProfile.idUser) {
@@ -48,6 +44,7 @@ export class HomeComponent {
     // if (this.dataProfile.IdUser)
       this.servicesService.getServices().subscribe((data) => {
         this.listaPublicaciones = data;
+        console.log(data[0])
         this.listaPublicacionesAux = this.listaPublicaciones;
       });
   }
@@ -107,7 +104,7 @@ export class HomeComponent {
     }
     if (this.filtroCategoria != 'todas') {
       const publicacionesFiltradas = this.listaPublicaciones.filter(
-        (publicacion) => publicacion.categoria == this.filtroCategoria
+        (publicacion) => publicacion.categorie == this.filtroCategoria
       );
       this.listaPublicaciones = publicacionesFiltradas;
       this.errorfiltre = false;
@@ -127,14 +124,15 @@ export class HomeComponent {
   }
 
   async mostrarModalVerServicio(servicio: Service) {
+    console.log("en teoria aqui estan los datos del servicio" + servicio.numberDocumentUser);
     var datosContactService!: ContactService;
 
     this.viewService.setDatosService(servicio);
-    const idServiceAux = servicio.idService ? servicio.idService : '';
+    const numberDocumentUserAux = servicio.numberDocumentUser ? servicio.numberDocumentUser : '';
 
     try {
       await this.servicesService
-        .getContactServices(idServiceAux)
+        .getContactServices("213012")
         .subscribe((data) => {
           this.viewService.setDatosContactService(data);
           this.router.navigate(['viewService']);

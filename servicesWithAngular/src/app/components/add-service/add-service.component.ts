@@ -114,7 +114,7 @@ export class AddServiceComponent implements OnInit {
       await this.getImages();
   
       const dataService = {
-        categoria: this.categoria,
+        categorie: this.categoria,
         nameService: this.nameService,
         description: this.description,
         initialPrice: this.initialPrice,

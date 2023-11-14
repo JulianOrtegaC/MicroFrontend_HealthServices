@@ -70,10 +70,10 @@
           >
             <option value="" selected disabled>Departamento</option>
             <option
-              [value]="department.codigodepartamento"
+              [value]="department.codeDepartment"
               *ngFor="let department of departments"
             >
-              {{ department.nombredepartamento }}
+              {{ department.nameDepartment }}
             </option>
           </select>
          
@@ -83,8 +83,8 @@
       <div class="editdataSelect">
         <div class="select">
             <select class="selectx Muni" name="city" [(ngModel)]="city">
-                <option [value]="city.idmunicipios" *ngFor="let city of cities">
-                  {{ city.nombremunicipio }}
+                <option [value]="city.idCity" *ngFor="let city of cities">
+                  {{ city.nameCity }}
                 </option>
               </select>
         </div>
