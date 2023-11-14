@@ -91,7 +91,7 @@ export class ProfileComponent implements OnInit, AfterViewInit {
     this.userService.getImageImgProfile;
   }
 
-  @ViewChild(MatPaginator)
+  @ViewChild('paginatorCompras') paginatorCompras!: MatPaginator;
   dataSource = <any>[];
   paginator!: MatPaginator;
 
@@ -114,7 +114,7 @@ export class ProfileComponent implements OnInit, AfterViewInit {
         });
   }
   ngAfterViewInit() {
-    this.dataSource.paginator = this.paginator;
+    this.dataSource.paginator = this.paginatorCompras;
 
     // Obtén todos los elementos de ancla del menú
     const elementosMenu = document.getElementsByTagName('a');
