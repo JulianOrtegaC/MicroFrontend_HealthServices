@@ -22,19 +22,20 @@ export interface EditData {
     Photo?: string;
     CoverPhoto?: string;
     birthdate?: string;
+    numberDocument?:string;
 }
 export interface Service{
-    numberDocumentUser?:string;
     idService ?:string;
-    categorie:string;
     nameService:string;
     description :string;
-    preview:string;
-    initialPrice :number;
+    initialPrice :string;
     pathPhotos :string;
     address:string;
-    datesDispo :string;
-    dispo:string;
+    numberDocumentUser?:string;
+    datesAvailability :string;
+    categorie:string;
+    preview:string;
+    availability:string;
 }
 
 export interface ContactService{

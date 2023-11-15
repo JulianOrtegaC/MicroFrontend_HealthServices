@@ -64,7 +64,7 @@ export class AddServiceComponent implements OnInit {
   nameService!: string;
   preview!: string;
   description!: string;
-  initialPrice!: number;
+  initialPrice!: string;
   pathPhotos: any[] = [];
   address!: string;
   dispo!:string;
@@ -90,6 +90,7 @@ export class AddServiceComponent implements OnInit {
     lector.onload = () => {
       this.imagenes.push(lector.result as string);
     };
+    console.log(this.imagenes)
   }
 
  
@@ -114,18 +115,17 @@ export class AddServiceComponent implements OnInit {
       await this.getImages();
   
       const dataService = {
-        categorie: this.categoria,
         nameService: this.nameService,
         description: this.description,
         initialPrice: this.initialPrice,
         pathPhotos: JSON.stringify(this.pathPhotos),
         address: this.address,
-        datesDispo: this.datesDispo,
+        datesAvailability: this.datesDispo,
+        categorie: this.categoria,
+        availability:this.dispo,
         preview: this.preview,
-        idUser:this.registerService.getdatosPerfil$.idUser,
-        dispo:this.dispo,
+        numberDocumentUser:this.registerService.getdatosPerfil$.numberDocument,
       };
-  console.log("este es el servicio a agregar"+dataService)
       this.servicesService.crearService(dataService).subscribe({
         next: (res: any) => {
           this.router.navigate(['profile']);

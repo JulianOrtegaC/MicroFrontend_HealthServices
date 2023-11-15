@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from '../../environments/environment';
 import { EditData, Registro, RequestService, Service } from '../interfaces/cuenta';
@@ -11,6 +11,7 @@ export class ServicesService {
   private myAppUrl: string = environment.endpoint;
   private microUsers: string = environment.urlAPIMicroServicesUser;
   private myApiUrl: string = '/api/services/';
+  private myApiUrlAdd: string = '/api/services/addService/';
   private myApiUsers: string = '/api/MyUser/';
   private myApiUrlR: string = '/api/request/';
   userID = '';
@@ -20,23 +21,23 @@ export class ServicesService {
 
   constructor(private http: HttpClient) {}
 
-  crearService(service: Service): Observable<any> {
-    return this.http.post(
-      `${this.myAppUrl}${this.myApiUrl}createService/`,
-      service
-    );
+  crearService(services: Service): Observable<any> {
+    services.initialPrice=""+services.initialPrice;
+    return this.http.post("https://localhost:7183/api/services/addService/",services,{});
+
   }
+
 
   getServices(): Observable<any> {
     return this.http.get(`${this.myAppUrl}${this.myApiUrl}listServices`);
   }
 
-  getMyServices( idUser:string): Observable<any> {
-    return this.http.get(`${this.myAppUrl}${this.myApiUrl}listServicesByIdUser?idUser=${idUser}`);
+  getMyServices( numberDocument:string): Observable<any> {
+    return this.http.get(`${this.myAppUrl}${this.myApiUrl}listServicesByIdUser?numberDocumentUser=${numberDocument}`);
   }
   getContactServices( number_document:string): Observable<any> {
-    // return this.http.get(`${this.microUsers}${this.myApiUsers}dataContactService?number_document=${number_document}`);
-    return this.http.get(`https://localhost:7137${this.myApiUsers}dataContactService?number_document=${number_document}`);
+    return this.http.get(`${this.microUsers}${this.myApiUsers}dataContactService?number_document=${number_document}`);
+    // return this.http.get(`https://localhost:7137${this.myApiUsers}dataContactService?number_document=${number_document}`);
   }
 
   crearRequest(request: RequestService): Observable<any> {

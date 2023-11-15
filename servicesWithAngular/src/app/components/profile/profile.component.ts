@@ -40,6 +40,7 @@ export class ProfileComponent implements OnInit, AfterViewInit {
   imageURL: string | null = null;
   file: any;
   changeImg: boolean = false;
+  auxNumber: string  = "";
 
   // Data Nueva nueva
   updateModel: EditData = {
@@ -104,10 +105,13 @@ export class ProfileComponent implements OnInit, AfterViewInit {
           this.dataSource.paginator = this.paginator;
         });
   }
+
+  
   getServices() {
+   this.auxNumber = this.dataProfile.numberDocument = this.dataProfile.numberDocument ?? '';
     if (this.dataProfile.idUser)
       this.servicesService
-        .getMyServices(this.dataProfile.idUser)
+        .getMyServices(this.auxNumber)
         .subscribe((data) => {
           this.dataSource = new MatTableDataSource<Service>(data);
           this.dataSource.paginator = this.paginator;
@@ -250,8 +254,8 @@ export class ProfileComponent implements OnInit, AfterViewInit {
       this.dataProfile.Photo = this.imageURL = this.imageURL ?? '';
     }
     var id = '';
-    if (this.dataProfile.idUser != null) {
-      var id = this.dataProfile.idUser;
+    if (this.dataProfile.numberDocument != null) {
+      var id = this.dataProfile.numberDocument;
     }
 
     this.updateModel.Photo = this.imageURL = this.imageURL ?? '';

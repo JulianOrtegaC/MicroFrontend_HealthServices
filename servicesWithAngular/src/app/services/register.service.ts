@@ -42,6 +42,7 @@ export class RegisterService {
       const objetoString = localStorage.getItem('data_user');
       if (objetoString) {
         this.datosPerfil= JSON.parse(objetoString);
+        console.log(this.datosPerfil);
       }
     return this.datosPerfil;
   }

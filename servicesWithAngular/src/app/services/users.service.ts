@@ -33,8 +33,9 @@ export class UsersService {
         return this.http.patch(
       `${this.myAppUrl}${this.myApiUrl}editUser/${id}`,updateModel ,{});
   }
-  updateUser(id: string, updateModel: EditData): Observable<EditData> {
-    const url = `${this.myAppUrl}/User/editUser/${id}`;
+  updateUser(number_document: string, updateModel: EditData): Observable<EditData> {
+    // const url = `${this.myAppUrl}/MyUser/editUser/${id}`;
+    const url = `https://localhost:7137/api/MyUser/editClientPatch/${number_document}`;
     return this.http.patch<EditData>(url, updateModel);
   }
 

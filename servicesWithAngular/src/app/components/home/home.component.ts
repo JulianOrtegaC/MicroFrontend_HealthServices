@@ -66,9 +66,9 @@ export class HomeComponent {
     }
 
     if (button == 'precioBajo') {
-      this.listaPublicaciones.sort((a, b) => a.initialPrice - b.initialPrice);
+      this.listaPublicaciones.sort((a, b) =>  parseInt(a.initialPrice) - parseInt(b.initialPrice));
     } else if (button == 'precioAlto') {
-      this.listaPublicaciones.sort((a, b) => b.initialPrice - a.initialPrice);
+      this.listaPublicaciones.sort((a, b) => parseInt( b.initialPrice) -  parseInt(a.initialPrice));
     }
   }
 
@@ -83,20 +83,20 @@ export class HomeComponent {
       if (this.filtroPriceMax != 0) {
         const publicacionesFiltradas = this.listaPublicaciones.filter(
           (publicacion) =>
-            publicacion.initialPrice >= this.filtroPriceMin &&
-            publicacion.initialPrice <= this.filtroPriceMax
+          parseInt(publicacion.initialPrice) >= this.filtroPriceMin &&
+          parseInt(publicacion.initialPrice) <= this.filtroPriceMax
         );
         this.listaPublicaciones = publicacionesFiltradas;
         this.errorfiltre = false;
       } else if (this.filtroPriceMax == 0) {
         const publicacionesFiltradas = this.listaPublicaciones.filter(
-          (publicacion) => publicacion.initialPrice >= this.filtroPriceMin
+          (publicacion) =>  parseInt(publicacion.initialPrice) >= this.filtroPriceMin
         );
         this.listaPublicaciones = publicacionesFiltradas;
         this.errorfiltre = false;
       } else if (this.filtroPriceMin == 0 && this.filtroPriceMax! + 0) {
         const publicacionesFiltradas = this.listaPublicaciones.filter(
-          (publicacion) => publicacion.initialPrice <= this.filtroPriceMax
+          (publicacion) =>  parseInt(publicacion.initialPrice) <= this.filtroPriceMax
         );
         this.listaPublicaciones = publicacionesFiltradas;
         this.errorfiltre = false;
@@ -132,7 +132,7 @@ export class HomeComponent {
 
     try {
       await this.servicesService
-        .getContactServices("213012")
+        .getContactServices(numberDocumentUserAux)
         .subscribe((data) => {
           this.viewService.setDatosContactService(data);
           this.router.navigate(['viewService']);
