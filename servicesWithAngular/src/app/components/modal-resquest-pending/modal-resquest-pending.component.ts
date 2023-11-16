@@ -55,7 +55,7 @@ export class ModalResquestPendingComponent implements OnInit, AfterViewInit{
     .getMyServicesRequest
   }
 
-  rechazarRequest(idRequest:string){
+  rechazarRequest(idRequest:number){
     this.servicesService.patchStatusRequest(idRequest,"rechazada").subscribe((data) => {
    
     });
