@@ -10,6 +10,7 @@ import { BehaviorSubject, Observable } from 'rxjs';
 export class ServicesService {
   private myAppUrl: string = environment.endpoint;
   private microUsers: string = environment.urlAPIMicroServicesUser;
+  private microRequest: string = environment.urlAPIMicroServicesRequest;
   private myApiUrl: string = '/api/services/';
   private myApiUrlAdd: string = '/api/services/addService/';
   private myApiUsers: string = '/api/MyUser/';
@@ -18,9 +19,21 @@ export class ServicesService {
   private userID$ = new BehaviorSubject<string>(this.userID);
 
   public datosPerfil!: EditData;
-
+  public idUserServiceAux!: string;
+  public idServiceAux!: string;
   constructor(private http: HttpClient) {}
 
+
+  getIdUserServiceAux(){
+    return this.idUserServiceAux;
+  }
+  getIdServiceAux(){
+    return this.idServiceAux;
+  }
+  setInfoRequestServices(idUserService:string , idService:string){
+    this.idUserServiceAux=idUserService;
+this.idServiceAux=idService;
+  }
   crearService(services: Service): Observable<any> {
     services.initialPrice=""+services.initialPrice;
     return this.http.post("https://localhost:7183/api/services/addService/",services,{});
@@ -42,23 +55,29 @@ export class ServicesService {
 
   crearRequest(request: RequestService): Observable<any> {
     return this.http.post(
-      `${this.myAppUrl}${this.myApiUrlR}createRequest/`,
+      `${this.microRequest}${this.myApiUrlR}createRequest/`,
       request
     );
   }
 
   getMyRequest( idUser:string): Observable<any> {
-    return this.http.get(`${this.myAppUrl}${this.myApiUrlR}listServicesByIdUser?idUser=${idUser}`);
+    return this.http.get(`${this.microRequest}${this.myApiUrlR}getRequestsByUsers?idUserPetitioner=${idUser}`);
   }
-  deleteRequest( serviceId:string , userId:string): Observable<any> {
-    return this.http.delete(`${this.myAppUrl}${this.myApiUrlR}deleteRequest?serviceId=${serviceId}&userId=${userId}`);
+  getMyServicesRequest( idUserService:string, idService:string): Observable<any> {
+    return this.http.get(`${this.microRequest}${this.myApiUrlR}getServicesAndRequest?idService=${idService}&idUserService=${idUserService}`);
+  }
+  deleteRequest( serviceId:string , idUserPetitioner:string): Observable<any> {
+    return this.http.delete(`${this.microRequest}${this.myApiUrlR}deleteRequest?serviceId=${serviceId}&idUserPetitioner=${idUserPetitioner}`);
   }
 
   deleteService( serviceId:string): Observable<any> {
     return this.http.delete(`${this.myAppUrl}${this.myApiUrl}deleteService?serviceId=${serviceId}`);
   }
 
+  patchStatusRequest(idRequest:number,status:String ){
+    return this.http.get(`${this.microRequest}${this.myApiUrlR}patchRequest?idRequest=${idRequest}&status=${status}`);
 
+  }
   cargarDepartment():Observable<any>{
     return this.http.get(`${this.myAppUrl}/Department/`)
     }

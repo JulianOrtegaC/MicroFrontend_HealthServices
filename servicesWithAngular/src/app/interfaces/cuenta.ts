@@ -44,10 +44,17 @@ export interface ContactService{
 }
 
 export interface RequestService{
-    userIdUser?:string;
-    serviceIdService ?:string;
-    nameService?:string;
+    idUserPetitioner?:string;
+    idUserService?:string;
+    idService ?:string;
     status?:string;
+    nameServices:string;
+}
+export interface Request{
+    idUserPetitioner: string | undefined;
+  idService: string | undefined;
+  status: string;
+  nameServices:string;
 }
 
 export interface Department{

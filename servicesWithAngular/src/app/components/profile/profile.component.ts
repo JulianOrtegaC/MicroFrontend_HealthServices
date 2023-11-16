@@ -18,6 +18,7 @@ import {
   listAll,
   getDownloadURL,
 } from '@angular/fire/storage';
+import { ServicedialogService } from 'src/app/services/servicedialog.service';
 
 @Component({
   selector: 'app-profile',
@@ -60,7 +61,8 @@ export class ProfileComponent implements OnInit, AfterViewInit {
     private servicesService: ServicesService,
     private registerService: RegisterService,
     private userService: UsersService,
-    private router: Router
+    private router: Router,
+    private dialogService:ServicedialogService
   ) {
     this.dataProfile = registerService.getdatosPerfil$;
     this.getImgProfileew();
@@ -96,10 +98,17 @@ export class ProfileComponent implements OnInit, AfterViewInit {
   dataSource = <any>[];
   paginator!: MatPaginator;
 
+  showModalServicesRequest(idUserService:string , idService:string){
+    this.servicesService.setInfoRequestServices(idUserService,idService);
+    this.router.navigate(['modalRequestServices']);
+
+  }
   getRequest() {
+    this.auxNumber = this.dataProfile.numberDocument = this.dataProfile.numberDocument ?? '';
+
     if (this.dataProfile.idUser)
       this.servicesService
-        .getMyRequest(this.dataProfile.idUser)
+        .getMyRequest(this.auxNumber)
         .subscribe((data) => {
           this.dataSource = new MatTableDataSource<RequestService>(data);
           this.dataSource.paginator = this.paginator;
@@ -193,10 +202,9 @@ export class ProfileComponent implements OnInit, AfterViewInit {
   eliminarA(idSub: number) {
     this.router.navigate(['start']);
   }
-  eliminarInscripcion(serviceId:string , userId:string) {
-
+  eliminarInscripcion(serviceId:string , idUserPetitioner:string) {
     this.servicesService
-    .deleteRequest(serviceId, userId)
+    .deleteRequest(serviceId, idUserPetitioner)
     .subscribe((data) => {
       this.router.navigate(['home']);
     });

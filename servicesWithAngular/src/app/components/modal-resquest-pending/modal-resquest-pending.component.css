@@ -1,0 +1,23 @@
+.TablaxD{
+    margin: auto;
+    width: 60%;
+    height: 80%;
+}
+
+.btnAceptar {
+    border-radius: 20px;
+    height: 40px;
+    border:none;
+    color: aliceblue;
+
+    background-color:#557C55;
+}
+.btnRechazar{
+    border-radius: 20px;
+    height: 40px;
+    border:none;
+    color: aliceblue;
+
+    background-color: #FA7070;
+
+}

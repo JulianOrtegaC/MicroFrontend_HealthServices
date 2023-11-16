@@ -6,6 +6,7 @@ import { HomeComponent } from './components/home/home.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { AddServiceComponent } from './components/add-service/add-service.component';
 import { ViewServiceComponent } from './components/view-service/view-service.component';
+import { ModalResquestPendingComponent } from './components/modal-resquest-pending/modal-resquest-pending.component';
 
 
 const routes: Routes = [
@@ -15,6 +16,7 @@ const routes: Routes = [
   {path: 'profile', component: ProfileComponent},
   {path: 'addService', component:AddServiceComponent},
   {path: 'viewService',component:ViewServiceComponent,canActivate:[GuardGuard]},
+  {path: 'modalRequestServices',component:ModalResquestPendingComponent},
 
 
 ];

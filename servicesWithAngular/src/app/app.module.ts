@@ -19,6 +19,7 @@ import { AboutUsComponent } from './components/about-us/about-us.component';
 import { ViewServiceComponent } from './components/view-service/view-service.component';
 import { provideAuth,getAuth } from '@angular/fire/auth';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
+import { ModalResquestPendingComponent } from './components/modal-resquest-pending/modal-resquest-pending.component';
 
 
 
@@ -33,7 +34,8 @@ import { provideFirestore,getFirestore } from '@angular/fire/firestore';
     HomeComponent,
     OrderByPrecioPipe,
     AboutUsComponent,
-    ViewServiceComponent
+    ViewServiceComponent,
+    ModalResquestPendingComponent,
   ],
   imports: [
     BrowserModule,

@@ -11,10 +11,7 @@ import { MatNativeDateModule } from '@angular/material/core';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { MatTableModule } from '@angular/material/table';
 import {MatSelectModule} from '@angular/material/select';
-
-
-
-
+import { MatDialogModule } from '@angular/material/dialog';
 
 
 
@@ -42,7 +39,8 @@ import {MatSelectModule} from '@angular/material/select';
     ReactiveFormsModule,
     FormsModule,
     MatTableModule,
-    MatSelectModule
+    MatSelectModule,
+    MatDialogModule
   ],
   exports: [ CommonModule,
     MatCheckboxModule,
@@ -55,7 +53,9 @@ import {MatSelectModule} from '@angular/material/select';
     MatNativeDateModule ,
     MatIconModule,
     MatTableModule,
-    MatSelectModule
+    MatSelectModule,
+    MatDialogModule,
+
   ],
 })
 export class SharedModule { }

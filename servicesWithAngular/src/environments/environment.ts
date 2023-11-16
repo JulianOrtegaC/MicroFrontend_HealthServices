@@ -21,6 +21,7 @@ export const environment = {
   production: false,
   endpoint: 'https://localhost:7183',
   urlAPIMicroServicesUser:"https://projectmicroservicesusersapi.azurewebsites.net/", 
+  urlAPIMicroServicesRequest:'https://localhost:7198'
 };
 
 /*

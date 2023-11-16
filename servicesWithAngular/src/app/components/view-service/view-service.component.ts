@@ -47,9 +47,11 @@ export class ViewServiceComponent {
   }
   solicitar(xd: Service) {
     const request: RequestService = {
-      userIdUser: this.dataProfile.idUser,
-      serviceIdService: xd.idService,
+      idUserPetitioner: this.dataProfile.numberDocument,
+      idService: ""+xd.idService,
+      idUserService:""+xd.numberDocumentUser,
       status: 'solicitado',
+      nameServices:xd.nameService,
     };
     this.serviceServices.crearRequest(request).subscribe((data) => {
       this.router.navigate(['profile']);

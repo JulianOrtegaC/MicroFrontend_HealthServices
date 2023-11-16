@@ -7,7 +7,15 @@
     font-style: normal;
     margin-left: 5%;
   }
-
+  .custom-dialog-container {
+    background-color: #147ad4;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 200px;
+  }
   .matDividerMicuenta {
     width: 90%;
   }

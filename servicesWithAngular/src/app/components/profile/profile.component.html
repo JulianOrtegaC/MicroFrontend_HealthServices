@@ -91,7 +91,7 @@
                     <!-- Name Column -->
                     <ng-container matColumnDef="Nombre">
                         <th mat-header-cell *matHeaderCellDef> Nombre del Servicio </th>
-                        <td mat-cell *matCellDef="let element"> {{element.nameService}} </td>
+                        <td mat-cell  *matCellDef="let element"> {{element.nameServices}} </td>
                       </ng-container>
 
                     <!-- Weight Column -->
@@ -103,7 +103,7 @@
                     <ng-container matColumnDef="Eliminar" >
                         <th mat-header-cell *matHeaderCellDef> Eliminar </th>
                         <td mat-cell *matCellDef="let element">
-                            <button class="btn btn-danger" (click)="eliminarInscripcion(element.serviceIdService ,element.userIdUser)">
+                            <button class="btn btn-danger" (click)="eliminarInscripcion(element.idService ,element.idUserPetitioner)">
 eliminar
                                 <i class="fa-solid fa-trash" style="color: #ffff;"></i> 
                             </button>
@@ -121,6 +121,7 @@ eliminar
         <div class="conteVentas " *ngIf="showMisServis">
             <h1 class="h1-cv">Tus Servicios</h1>
             <button class="buttonAddService" routerLink="/addService" >Añadir + </button>
+            <button class="buttonAddService"  >prueba + </button>
 
             <div class="TablaxD">
                 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
@@ -135,26 +136,26 @@ eliminar
                     </ng-container>
                     <ng-container matColumnDef="Nombre">
                       <th mat-header-cell *matHeaderCellDef> Nombre del Servicio </th>
-                      <td mat-cell *matCellDef="let element"> {{element.nameService}} </td>
+                      <td mat-cell (click)="showModalServicesRequest(element.numberDocumentUser,element.idService)" *matCellDef="let element"> {{element.nameService}} </td>
                     </ng-container>
                   
                     <ng-container matColumnDef="Categoria">
                       <th mat-header-cell *matHeaderCellDef> Categoria </th>
-                      <td mat-cell *matCellDef="let element"> {{element.categoria}} </td>
+                      <td mat-cell (click)="showModalServicesRequest(element.numberDocumentUser,element.idService)" *matCellDef="let element"> {{element.categoria}} </td>
                     </ng-container>
                   
                     <ng-container matColumnDef="Contratado">
                       <th mat-header-cell *matHeaderCellDef> Contratado </th>
-                      <td mat-cell *matCellDef="let element"> proximamente </td>
+                      <td mat-cell (click)="showModalServicesRequest(element.numberDocumentUser,element.idService)" *matCellDef="let element"> proximamente </td>
                     </ng-container>
                   
                     <ng-container matColumnDef="Calificaciones">
                       <th mat-header-cell *matHeaderCellDef> Calificaciones </th>
-                      <td mat-cell *matCellDef="let element"> proximamente </td>
+                      <td mat-cell (click)="showModalServicesRequest(element.numberDocumentUser,element.idService)" *matCellDef="let element"> proximamente </td>
                     </ng-container>
                     <ng-container matColumnDef="Precio">
                       <th mat-header-cell *matHeaderCellDef> Precio Inicial </th>
-                      <td mat-cell *matCellDef="let element"> {{element.initialPrice}} </td>
+                      <td mat-cell (click)="showModalServicesRequest(element.numberDocumentUser,element.idService)" *matCellDef="let element"> {{element.initialPrice}} </td>
                     </ng-container>
                     <ng-container matColumnDef="Eliminar" >
                         <th mat-header-cell *matHeaderCellDef> Eliminar </th>
@@ -307,3 +308,5 @@ eliminar
         </div>
 
     </div>
+
+    div
