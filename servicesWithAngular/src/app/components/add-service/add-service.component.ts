@@ -44,12 +44,10 @@ export class AddServiceComponent implements OnInit {
   }
 
   loadCities(){
-    console.log('este es el departamento'+this.department)
     this.servicesService.cargarCities(this.department ).subscribe({
       next:(res:any)=>{
         console.log(res)
         this.cities=res;
-        console.log('si me trae la ciudad' +this.cities)
       },
       error:(err)=>{
         console.log(err.message)
